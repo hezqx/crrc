@@ -54,7 +54,9 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="bannerItem">
-                    <img src="./img/banner.jpg" alt="中国中车首页轮播图">
+                    <video class="bannerVideo" autoplay muted playsinline preload="auto" poster="./img/banner.jpg">
+                        <source src="./crrc.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -153,42 +155,62 @@
             <div class="zlcpTabList clearfix">
                 <div class="zlcpTabItem zlcpTabItemActive fl" data-title="动车组" data-desc="动车组、客车主要承担铁路客运任务，安全性、可靠性、可维修性、舒适性是衡量客运装备品质的重要指标。伴随着经济社会快速发展，数字技术推广应用，高速化、数智化、绿色化、融合化成为产品技术主要发展方向。" data-image="./img/b1.png" data-link="javascript:;">
                     <a href="javascript:;" class="zlcpTabBtn">
+                        <span class="zlcpTabGlow"></span>
                         <div class="zlcpTabHead clearfix">
                             <h4 class="fl">动车组</h4>
                             <span class="fr">01</span>
                         </div>
                         <p class="zlcpTabEn">Electric Multiple Unit</p>
-                        <p class="zlcpTabDesc">动车组、客车主要承担铁路客运任务，安全性、可靠性、可维修性</p>
+                        <p class="zlcpTabDesc">动车组、客车主要承担铁路客运任务，安全性、可靠性、可维修性...</p>
+                        <div class="zlcpTabMeta clearfix">
+                            <span class="zlcpTabMore fl">查看详情</span>
+                            <span class="zlcpTabArrow fr"></span>
+                        </div>
                     </a>
                 </div>
                 <div class="zlcpTabItem fl" data-title="机车" data-desc="铁路客车形成了多样化、系列化的产品结构，以高速动车组、城际动车组、内燃动车组等多层级产品满足干线铁路和区域运输需求，持续完善产品平台与关键系统能力。" data-image="./img/b2.png" data-link="javascript:;">
                     <a href="javascript:;" class="zlcpTabBtn">
+                        <span class="zlcpTabGlow"></span>
                         <div class="zlcpTabHead clearfix">
                             <h4 class="fl">机车</h4>
                             <span class="fr">02</span>
                         </div>
                         <p class="zlcpTabEn">Locomotive</p>
-                        <p class="zlcpTabDesc">铁路客车形成了多样化、系列化的产品结构，以高速动车组、城际动车组</p>
+                        <p class="zlcpTabDesc">铁路客车形成了多样化、系列化的产品结构，以高速动车组、城际动车组...</p>
+                        <div class="zlcpTabMeta clearfix">
+                            <span class="zlcpTabMore fl">查看详情</span>
+                            <span class="zlcpTabArrow fr"></span>
+                        </div>
                     </a>
                 </div>
                 <div class="zlcpTabItem fl" data-title="城际" data-desc="截至目前，中国大陆地区多个城市开通城市轨道交通运营线路，城际车辆产品在快速通勤、区域协同与多制式兼容方面不断迭代，形成高效便捷的综合出行体系。" data-image="./img/b3.png" data-link="javascript:;">
                     <a href="javascript:;" class="zlcpTabBtn">
+                        <span class="zlcpTabGlow"></span>
                         <div class="zlcpTabHead clearfix">
                             <h4 class="fl">城际</h4>
                             <span class="fr">03</span>
                         </div>
                         <p class="zlcpTabEn">Intercity Train</p>
-                        <p class="zlcpTabDesc">多个城市持续推进轨道交通建设，城际车辆产品在快速通勤与区域协同方面不断升级</p>
+                        <p class="zlcpTabDesc">多个城市持续推进轨道交通建设，城际车辆产品在快速通勤与区域协同方面...</p>
+                        <div class="zlcpTabMeta clearfix">
+                            <span class="zlcpTabMore fl">查看详情</span>
+                            <span class="zlcpTabArrow fr"></span>
+                        </div>
                     </a>
                 </div>
                 <div class="zlcpTabItem fl" data-title="地铁" data-desc="中国城市轨道交通开始大发展，车辆装备产品谱系逐渐完善，产品平台逐步迈向标准化、智能化和绿色化，能够覆盖不同运量等级和复杂运营场景。" data-image="./img/b4.png" data-link="javascript:;">
                     <a href="javascript:;" class="zlcpTabBtn">
+                        <span class="zlcpTabGlow"></span>
                         <div class="zlcpTabHead clearfix">
                             <h4 class="fl">地铁</h4>
                             <span class="fr">04</span>
                         </div>
                         <p class="zlcpTabEn">Metro Vehicle</p>
-                        <p class="zlcpTabDesc">中国城市轨道交通快速发展，车辆装备产品谱系逐渐完善，平台迈向标准化</p>
+                        <p class="zlcpTabDesc">中国城市轨道交通快速发展，车辆装备产品谱系逐渐完善，平台迈向标准化...</p>
+                        <div class="zlcpTabMeta clearfix">
+                            <span class="zlcpTabMore fl">查看详情</span>
+                            <span class="zlcpTabArrow fr"></span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -425,12 +447,15 @@
             on: {
                 init: function () {
                     updateBannerState(this);
+                    syncBannerMedia(this);
                 },
                 slideChange: function () {
                     updateBannerState(this);
+                    syncBannerMedia(this);
                 }
             }
         });
+        bindBannerVideo(bannerSwiper);
         return bannerSwiper;
     }
 
@@ -447,6 +472,36 @@
     /* 格式化轮播数字 */
     function formatBannerNum(num) {
         return num < 10 ? '0' + num : String(num);
+    }
+
+    /* 绑定首屏视频播放完成后的切换逻辑 */
+    function bindBannerVideo(swiper) {
+        $('.bannerVideo').each(function () {
+            var video = this;
+            $(video).off('ended.bannerVideo').on('ended.bannerVideo', function () {
+                if ($(video).closest('.swiper-slide').index() === swiper.activeIndex) {
+                    swiper.slideNext();
+                }
+            });
+        });
+    }
+
+    /* 同步轮播当前页的图片和视频状态 */
+    function syncBannerMedia(swiper) {
+        $('.bannerVideo').each(function () {
+            var video = this;
+            var isActive = $(video).closest('.swiper-slide').index() === swiper.activeIndex;
+            if (isActive) {
+                swiper.autoplay.stop();
+                video.currentTime = 0;
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+        if (!$('.swiper-slide').eq(swiper.activeIndex).find('.bannerVideo').length) {
+            swiper.autoplay.start();
+        }
     }
 
     /* 绑定语言下拉交互 */

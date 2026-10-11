@@ -34,6 +34,7 @@
 .bannerSwiper { width: 100%;height: 100%; }
 .bannerItem { width: 100%;height: 100vh;position: relative;overflow: hidden; }
 .bannerItem img { width: 100%;height: 100%;object-fit: cover;display: block; }
+.bannerVideo { width: 100%;height: 100%;object-fit: cover;display: block; }
 .bannerControl {position: absolute;left: 50%;bottom: 46px;transform: translateX(-50%);z-index: 3; }
 .bannerProgress { width: 470px;height: 2px;background: rgba(255,255,255,0.28);overflow: hidden;margin: 25px 10px 0 0    ; }
 .bannerProgressBar { width: 100%;height: 100%;background: #fff;display: block; }
@@ -90,14 +91,24 @@
 .zlcpDisplayMore { width: 130px;height: 44px;border: 1px solid rgba(255,255,255,0.4);border-radius: 4px;color: #fff;font-size: 16px;line-height: 44px;text-align: center;display: block;margin-top: 52px;background: rgba(255,255,255,0.16); }
 .zlcpDisplayMore:hover { background: rgba(255,255,255,0.28); }
 .zlcpTabList { margin-top: 12px;position: relative;z-index: 3; }
-.zlcpTabItem { width: 25%;height: 190px;border: 1px solid rgba(255,255,255,0.22);background: rgba(255,255,255,0.14);box-sizing: border-box;transition: all 0.3s ease; }
-.zlcpTabBtn { width: 100%;height: 100%;padding: 24px 28px 0;backdrop-filter: blur(20px);box-sizing: border-box;display: block; border: 1px solid;border-image-source: conic-gradient(from 102.21deg at 52.75% 38.75%, rgba(249, 249, 249, 0.3) -32.95deg, rgba(64, 64, 64, 0.5) 10.52deg, rgba(64, 64, 64, 0.35) 32.12deg, rgba(255, 255, 255, 0.3) 60.28deg, rgba(255, 255, 255, 0.3) 107.79deg, rgba(64, 64, 64, 0.35) 187.59deg, rgba(249, 249, 249, 0.5) 207.58deg, rgba(255, 255, 255, 0.3) 287.31deg, rgba(249, 249, 249, 0.3) 327.05deg, rgba(64, 64, 64, 0.5) 370.52deg);
-}
-.zlcpTabHead h4 { color: #fff;font-size: 24px;line-height: 1.2;font-weight: bold; }
-.zlcpTabHead span { color: rgba(255,255,255,0.88);font-size: 36px;line-height: 1;font-weight: bold; }
-.zlcpTabEn { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 24px;margin-top: 8px; }
-.zlcpTabDesc { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 30px;margin-top: 10px; }
-.zlcpTabItemActive, .zlcpTabItem:hover { background: rgba(255,255,255,0.2);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15); }
+.zlcpTabItem { width: 25%;height: 190px;border: 1px solid rgba(255,255,255,0.22);background: linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.08) 100%);box-sizing: border-box;transition: all 0.35s ease;position: relative;overflow: hidden;backdrop-filter: blur(10px); }
+.zlcpTabItem:before { content: "";width: 100%;height: 1px;background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(140,231,255,1) 50%, rgba(255,255,255,0) 100%);position: absolute;left: -100%;top: 0;transition: left 0.55s ease; }
+.zlcpTabBtn { width: 100%;height: 100%;padding: 24px 28px 18px;backdrop-filter: blur(20px);box-sizing: border-box;display: block;border: 1px solid;border-image-source: conic-gradient(from 102.21deg at 52.75% 38.75%, rgba(249, 249, 249, 0.3) -32.95deg, rgba(64, 64, 64, 0.5) 10.52deg, rgba(64, 64, 64, 0.35) 32.12deg, rgba(255, 255, 255, 0.3) 60.28deg, rgba(255, 255, 255, 0.3) 107.79deg, rgba(64, 64, 64, 0.35) 187.59deg, rgba(249, 249, 249, 0.5) 207.58deg, rgba(255, 255, 255, 0.3) 287.31deg, rgba(249, 249, 249, 0.3) 327.05deg, rgba(64, 64, 64, 0.5) 370.52deg);position: relative;overflow: hidden; }
+.zlcpTabGlow { width: 180px;height: 180px;border-radius: 50%;background: radial-gradient(circle, rgba(86,208,255,0.34) 0%, rgba(86,208,255,0.1) 40%, rgba(86,208,255,0) 74%);position: absolute;right: -58px;top: -86px;pointer-events: none;transition: all 0.35s ease; }
+.zlcpTabHead h4 { color: #fff;font-size: 24px;line-height: 1.2;font-weight: bold;position: relative;z-index: 2; }
+.zlcpTabHead span { color: rgba(255,255,255,0.78);font-size: 46px;line-height: 1;font-weight: bold;position: relative;z-index: 2;transition: all 0.35s ease; }
+.zlcpTabEn { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 24px;margin-top: 8px;position: relative;z-index: 2; }
+.zlcpTabDesc { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 30px;margin-top: 10px;position: relative;z-index: 2; }
+.zlcpTabMeta { margin-top: 16px;position: relative;z-index: 2; }
+.zlcpTabMore { color: rgba(255,255,255,0.72);font-size: 12px;line-height: 24px;letter-spacing: 2px; }
+.zlcpTabArrow { width: 44px;height: 10px;margin-top: 7px;background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.42) 42%, rgba(255,255,255,1) 100%);position: relative;transition: all 0.35s ease; }
+.zlcpTabArrow:after { content: "";width: 10px;height: 10px;border-top: 1px solid #fff;border-right: 1px solid #fff;position: absolute;right: 0;top: 0;transform: rotate(45deg);box-sizing: border-box; }
+.zlcpTabItemActive, .zlcpTabItem:hover { background: linear-gradient(180deg, rgba(115,181,255,0.26) 0%, rgba(255,255,255,0.12) 100%);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15), 0 16px 30px rgba(3,34,89,0.22);transform: translateY(-6px); }
+.zlcpTabItemActive:before, .zlcpTabItem:hover:before { left: 0; }
+.zlcpTabItemActive .zlcpTabGlow, .zlcpTabItem:hover .zlcpTabGlow { transform: scale(1.18);opacity: 1; }
+.zlcpTabItemActive .zlcpTabHead span, .zlcpTabItem:hover .zlcpTabHead span { color: #fff;text-shadow: 0 0 18px rgba(127,227,255,0.42); }
+.zlcpTabItemActive .zlcpTabArrow, .zlcpTabItem:hover .zlcpTabArrow { width: 58px; }
+/* .zlcpTabItemActive .zlcpTabHead h4, .zlcpTabItem:hover .zlcpTabHead h4 { color: #C70019; } */
 @keyframes zlcpTrainEnter {
     0% { opacity: 0;transform: translateX(-80px); }
     100% { opacity: 1;transform: translateX(0); }
