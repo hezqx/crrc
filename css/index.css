@@ -1,0 +1,265 @@
+
+/* 首屏头部 */
+.siteHeader { width: 100%;padding: 28px 0;position: absolute;top: 0;left: 0;z-index: 20; }
+.headerInner { display: flex;align-items: center;justify-content: space-between; }
+.siteLogo { color: #fff;display: flex;align-items: baseline;width: 154px; }
+.logoCn { font-size: 30px;font-weight: bold;letter-spacing: 2px;line-height: 1; }
+.logoEn { font-size: 26px;font-weight: bold;letter-spacing: 1px;line-height: 1;margin-left: 14px; }
+.navList { display: flex;align-items: center; }
+.navItem { margin: 0 19px; }
+.navItem a { color: #fff;font-size: 20px;line-height: 1;display: block;padding: 8px 0;position: relative; }
+.navItemActive a, .navItem a:hover { color: #fff; }
+.navItemActive a:after, .navItem a:hover:after { content: "";width: 100%;height: 2px;background: #fff;position: absolute;left: 0;bottom: -10px; }
+.headerTools { display: flex;align-items: stretch; }
+.headerToolsMain { display: flex;align-items: center;padding: 0 38px; }
+.toolItem { color: #fff;font-size: 35px;line-height: 1;display: flex;align-items: center; }
+.toolItem img { display: block;flex-shrink: 0; }
+.searchBtn img { width: 20px; }
+.groupBtn img { width: 20px; }
+.toolItem span { margin-left: 6px; font-size:16px;color: #fff;}
+.toolSplitLine { width: 1px;height: 21px;background: #fff;margin: 0 12px;display: block; }
+.langDropdown {border-radius: 2px;height: 38px;position: relative;border-left: 1px solid rgba(255,255,255,0.3);background: rgba(132,174,241,0.18) }
+.langBtn { width: 100%;height: 100%;padding: 0 14px;color: #fff;font-size: 35px;line-height: 1;display: flex;align-items: center;justify-content: space-between;box-sizing: border-box; }
+.langIcon { width: 20px;display: block;flex-shrink: 0; }
+.langBtn span { flex: 1;padding-left: 6px; font-size: 16px;color: #fff;}
+.langArrow { width:8px;display: block;flex-shrink: 0;margin-left: 24px;transition: transform 0.3s ease; }
+.langMenu { width: 100%;padding: 12px 0;position: absolute;left: 0;top: calc(100% + 10px);background: rgba(37,78,142,0.96);border: 1px solid rgba(255,255,255,0.28);box-sizing: border-box;display: none; }
+.langMenuItem { color: #fff;font-size: 14px;line-height: 48px;padding: 0 12px;display: block; }
+.langMenuItem:hover { background: rgba(255,255,255,0.12); }
+.langDropdownActive .langMenu { display: block; }
+.langDropdownActive .langArrow { transform: rotate(180deg); }
+.toolItem:hover, .langBtn:hover { opacity: 0.88; }
+/* 首屏轮播 */
+.bannerWrap { width: 100%;height: 100vh;position: relative; }
+.bannerSwiper { width: 100%;height: 100%; }
+.bannerItem { width: 100%;height: 100vh;position: relative;overflow: hidden; }
+.bannerItem img { width: 100%;height: 100%;object-fit: cover;display: block; }
+.bannerControl {position: absolute;left: 50%;bottom: 46px;transform: translateX(-50%);z-index: 3; }
+.bannerProgress { width: 470px;height: 2px;background: rgba(255,255,255,0.28);overflow: hidden;margin: 25px 10px 0 0    ; }
+.bannerProgressBar { width: 100%;height: 100%;background: #fff;display: block; }
+.bannerPagination { color: #fff;font-size: 30px;line-height: 50px;letter-spacing: 1px; }
+.bannerPagination span.currentNum{color: #fff;font-size: 24px;}
+.bannerPagination span.splitLine{color: #eee;font-size: 16px;}
+.bannerPagination span.totalNum{color: #eee;font-size: 16px;}
+.splitLine { margin: 0 6px;color: rgba(255,255,255,0.65); }
+.bannerArrowGroup { display: flex;align-items: center; }
+.bannerPrev, .bannerNext { width: 50px;height: 50px;border: 1px solid #fff;border-radius: 50%;position: static;margin: 0 0 0 14px;color: #fff;background: rgba(255,255,255,0.2); }
+.bannerPrev:after, .bannerNext:after { font-size: 20px;font-weight: bold; }
+.bannerPrev:hover, .bannerNext:hover { border-color: rgba(255,255,255,0.88);background: rgba(255,255,255,0.5); }
+
+
+/* 核心系统解决方案 */
+.hxxtSer { padding: 170px 0;background: #edf3f6 url(../img/bg1.jpg) no-repeat center center/cover; }
+.hxxtSerMain {}
+.hxxtSerIntro{}
+.hxxtSerIntro1{ width: 410px;padding-top: 110px;}
+.hxxtSerTag { color: #333;font-size: 16px;line-height: 20px;padding-left: 54px;position: relative; }
+.hxxtSerTag:before { content: "";width: 38px;height: 2px;background:#C70019;position: absolute;left: 0;top: 9px; }
+.hxxtSerTitle { color: #141414;font-size: 42px;font-weight: bold;margin-top: 18px; }
+.hxxtSerDesc { color:#6E6E6E;font-size: 16px;line-height: 30px;margin-top: 30px; }
+.hxxtSerMore { width: 130px;height: 44px;border: 1px solid #60717D;color: #000;font-size: 16px;line-height: 44px;border-radius: 4px;text-align: center;display: block;margin-top: 60px; }
+.hxxtSerMore:hover { background: #60717D;color: #fff; }
+.hxxtSerList { width: 1100px;display: flex;flex-wrap: wrap;gap: 30px; }
+.hxxtSerItem { position: relative;overflow: hidden;display: block;background: #ccc; width: 48%;}
+.hxxtSerItem img { width: 100%;height: 100%;display: block;object-fit: cover; }
+.hxxtSerItem1,
+.hxxtSerItem3{position: relative;top: 30px;}
+.hxxtSerMask { width: 100%;height: 88px;position: absolute;left: 0;bottom: 0;background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.02) 100%);transition: all 0.7s ease; }
+.hxxtSerText { width: 100%;padding: 0 26px 20px;box-sizing: border-box;position: absolute;left: 0;bottom: 0;z-index: 2; }
+.hxxtSerText h3 { color: #fff;font-size: 24px;line-height: 30px;font-weight: normal; }
+.hxxtSerText p { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 30px;margin-top: 2px; }
+.hxxtSerItem:after { content: "";width: 28px;height: 7px;background: url(../img/a5.png) no-repeat center center/100% 100%;position: absolute;right: 18px;bottom: 26px;z-index: 2; }
+.hxxtSerItem:hover img { transform: scale(1.06);transition: all 0.7s ease; }
+.hxxtSerItem:hover .hxxtSerMask { height: 100%;background: linear-gradient(to bottom, rgba(20,20,20,0) 35%, rgba(20,20,20,0.45) 68%, #112F62 100%); }
+
+/* 主力产品展示 */
+.zlcpSer { padding: 90px 0;background: #edf3f6 url(../img/bg2.jpg) no-repeat center center/cover;}
+.zlcpSer:after { display: none; }
+.hxxtSerIntro2 { position: relative;z-index: 2; }
+.hxxtSerIntro2 * { color: #fff; }
+.hxxtSerIntro2 .hxxtSerTag:before { background: #fff; }
+.zlcpPanel { margin-top: 40px;position: relative;z-index: 2; }
+.zlcpPanel:before { content: "";width: 787px;height: 182px;background: url(../img/b5.png) no-repeat left top/100% 100%;position: absolute;left: 0;top: 0px;pointer-events: none; }
+.zlcpDisplay { min-height: 420px;position: relative; }
+.zlcpTrainWrap { width: 760px;padding-top: 48px;position: relative;z-index: 2; }
+.zlcpTrainImg { width: 100%;display: block; }
+.zlcpTrainAnimate .zlcpTrainImg { animation: zlcpTrainEnter 0.75s ease; }
+.zlcpContent { width: 654px;position: relative;z-index: 2; }
+.zlcpDisplayTitle { color: #fff;font-size: 32px;line-height: 1.2;font-weight: bold; }
+.zlcpDisplayDesc { color:#fff;font-size: 16px;line-height: 30px;margin-top: 24px;text-align: justify; }
+.zlcpDisplayMore { width: 130px;height: 44px;border: 1px solid rgba(255,255,255,0.4);border-radius: 4px;color: #fff;font-size: 16px;line-height: 44px;text-align: center;display: block;margin-top: 52px;background: rgba(255,255,255,0.16); }
+.zlcpDisplayMore:hover { background: rgba(255,255,255,0.28); }
+.zlcpTabList { margin-top: 12px;position: relative;z-index: 3; }
+.zlcpTabItem { width: 25%;height: 190px;border: 1px solid rgba(255,255,255,0.22);background: rgba(255,255,255,0.14);box-sizing: border-box;transition: all 0.3s ease; }
+.zlcpTabBtn { width: 100%;height: 100%;padding: 24px 28px 0;backdrop-filter: blur(20px);box-sizing: border-box;display: block; border: 1px solid;border-image-source: conic-gradient(from 102.21deg at 52.75% 38.75%, rgba(249, 249, 249, 0.3) -32.95deg, rgba(64, 64, 64, 0.5) 10.52deg, rgba(64, 64, 64, 0.35) 32.12deg, rgba(255, 255, 255, 0.3) 60.28deg, rgba(255, 255, 255, 0.3) 107.79deg, rgba(64, 64, 64, 0.35) 187.59deg, rgba(249, 249, 249, 0.5) 207.58deg, rgba(255, 255, 255, 0.3) 287.31deg, rgba(249, 249, 249, 0.3) 327.05deg, rgba(64, 64, 64, 0.5) 370.52deg);
+}
+.zlcpTabHead h4 { color: #fff;font-size: 24px;line-height: 1.2;font-weight: bold; }
+.zlcpTabHead span { color: rgba(255,255,255,0.88);font-size: 36px;line-height: 1;font-weight: bold; }
+.zlcpTabEn { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 24px;margin-top: 8px; }
+.zlcpTabDesc { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 30px;margin-top: 10px; }
+.zlcpTabItemActive, .zlcpTabItem:hover { background: rgba(255,255,255,0.2);box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15); }
+@keyframes zlcpTrainEnter {
+    0% { opacity: 0;transform: translateX(-80px); }
+    100% { opacity: 1;transform: translateX(0); }
+}
+
+/* 全球布局数据 */
+.qqbjSer{ padding: 90px 0 360px;background: #edf3f6 url(../img/bg3.jpg) no-repeat center center/cover;}
+.hxxtSerIntro3{width: 630px;}
+.Globaltext{font-size: 16px;line-height: 30px;margin-top: 30px;color: #333;text-align: justify;}
+.qqbjDataList { margin-top: 70px; }
+.qqbjDataItem { width: 33.33%; }
+.qqbjDataIcon { width: 33px;height: 33px;display: block; }
+.qqbjDataIconCar { width: 32px;height: 27px; }
+.qqbjDataNum { margin-top: 16px; }
+.qqbjDataNum .counterNum{font-family: Arial;font-weight: 700;font-style: Bold;font-size: 52px;color: #005EE2;}
+.qqbjDataNum .counterSuffix{font-family: Arial;font-weight: 700;font-style: Bold;font-size: 30px;color: #005EE2;}
+.counterSuffix { margin-left: 2px; }
+.qqbjDataLabel { color: #141414;font-size: 16px;line-height: 30px;margin-top: 12px; }
+.mapR { width: 950px; }
+/* 真实地理数据点阵地图 */
+.qqbjSer > .comwidth { display: flex;align-items: center;justify-content: space-between;gap: 20px; }
+.qqbjSer .hxxtSerIntro3 { width: 630px;flex: 0 0 39.375%;box-sizing: border-box; }
+.qqbjSer .mapR { min-width: 0;flex: 1;float: none; }
+.globalMap { width: 100%;position: relative; }
+.globalMapSvg { width: 100%;height: auto;display: block;overflow: visible; }
+.mapRoute { fill: none;stroke: #acc8ed;stroke-width: 1;opacity: 0.7;transition: stroke 0.25s, opacity 0.25s; }
+.mapRouteActive { stroke: #005ee2;stroke-width: 2;opacity: 1;stroke-dasharray: 7 5;animation: mapRouteFlow 1.2s linear infinite; }
+.mapChina { fill: #005ee2;stroke: #005ee2;stroke-width: 0.5; }
+.mapChinaLabel { fill: #fff;font: bold 19px Arial,sans-serif;pointer-events: none; }
+.mapMarker { cursor: pointer;outline: none; }
+.mapMarkerPin { fill: #3286ff;stroke: #f4fbff;stroke-width: 1.5;transition: fill 0.2s; }
+.mapMarkerHalo { fill: #2581ff;opacity: 0;transition: opacity 0.2s;pointer-events: none; }
+.mapMarker:hover .mapMarkerPin, .mapMarker:focus .mapMarkerPin, .mapMarkerActive .mapMarkerPin { fill: #0052ce; }
+.mapMarker:hover .mapMarkerHalo, .mapMarker:focus .mapMarkerHalo, .mapMarkerActive .mapMarkerHalo { opacity: 0.2; }
+.mapPopup { position: absolute;width: 290px;max-width: calc(100% - 16px);padding: 22px;box-sizing: border-box;z-index: 5;background: rgba(255,255,255,0.98);border: 1px solid #dbeafb;border-top: 3px solid #0868e6;border-radius: 8px;box-shadow: 0 12px 35px rgba(22,77,147,0.16); }
+.mapPopup[hidden] { display: none; }
+.mapPopupClose { position: absolute;right: 8px;top: 6px;width: 32px;height: 32px;border: 0;background: transparent;color: #68809c;font-size: 24px;cursor: pointer; }
+.mapPopupClose:hover { color: #005ee2; }
+.mapPopupClose:focus-visible { outline: 2px solid #005ee2;outline-offset: 1px; }
+.mapPopupRegion { padding-right: 18px;color: #6d91b6;font: 11px/1.5 Arial,sans-serif;letter-spacing: 0.5px; }
+.mapPopupTitle { margin: 9px 0 12px;color: #075ac7;font-size: 22px;line-height: 1.4; }
+.mapPopupDesc { color: #45617e;font-size: 14px;line-height: 1.9; }
+.mapPopupNote { margin-top: 14px;padding-top: 10px;border-top: 1px solid #edf2f8;color: #8a9bab;font-size: 11px;line-height: 1.5; }
+.mapHint { margin-top: 12px;text-align: center;color: #5b86b9;font-size: 12px;line-height: 20px; }
+.mapAttribution { margin-top: 4px;text-align: center;color: #829bb6;font-size: 10px;line-height: 18px; }
+@keyframes mapRouteFlow { to { stroke-dashoffset: -24; } }
+@media (prefers-reduced-motion: reduce) {
+    .mapRouteActive { animation: none; }
+}
+
+
+/* 合作伙伴 */
+.hzgySer { margin-top: -220px;padding-bottom: 120px;position: relative;z-index: 1; }
+.hzgySer > .comwidth { display: flex;align-items: stretch;background: #fff; }
+.hzgySer > .comwidth:after { display: none; }
+.hzgySer .hzgyL { width: 51.25%;float: none; }
+.hzgyL img { width: 100%;height: auto;display: block; }
+.hzgySer .hzgyR { width: 48.75%;float: none;display: flex;align-items: center;padding: 50px 60px 50px 75px;box-sizing: border-box;background: #fff url(../img/c5.png) no-repeat right bottom/357px 357px; }
+.hzgyR .hxxtSerIntro4 { width: 100%;padding-top: 0; }
+.hzgyR .hxxtSerTitle { font-size: 40px;line-height: 1.4; }
+.hzgyR .hxxtSerDesc { margin-top: 20px;font-size: 16px;line-height: 30px; }
+.hzgyR .hxxtSerMore { margin-top: 60px;background: #c70019;border-color: #c70019;color: #fff; }
+.hzgyR .hxxtSerMore:hover { background: #a60015;border-color: #a60015; }
+
+/* 关于我们 */
+.indexAboutSer { padding: 0 0 40px;background: #fff url(../img/bg5.jpg) no-repeat center bottom/100% auto; }
+.indexAboutList { display: flex;justify-content: space-between;gap: 44px; }
+.indexAboutCard { flex: 1;min-width: 0;position: relative;display: block;overflow: hidden;background: #112f62; }
+.indexAboutCard > img { width: 100%;height: auto;display: block;transition: transform 0.7s ease; }
+.indexAboutCard:before { content: "";position: absolute;left: 0;right: 0;bottom: 0;height: 46%;z-index: 1;background: linear-gradient(to bottom, rgba(20,20,20,0) 0%, rgba(20,20,20,0.48) 54%, #112f62 100%);pointer-events: none; }
+.indexAboutInfo { position: absolute;left: 0;right: 0;bottom: 0;z-index: 2;padding: 30px 30px 56px; }
+.indexAboutInfo:after { content: "";position: absolute;right: 30px;top: 62px;width: 28px;height: 7px;background: url(../img/a5.png) no-repeat center/100% 100%;transition: transform 0.3s ease; }
+.indexAboutInfo h3 { padding-right: 42px;color: #fff;font-size: 24px;line-height: 34px;font-weight: normal; }
+.indexAboutEn { padding-right: 42px;color: rgba(255,255,255,0.8);font-size: 16px;line-height: 26px; }
+.indexAboutDesc { margin-top: 16px;color: rgba(255,255,255,0.8);font-size: 16px;line-height: 26px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis; }
+.indexAboutCard:hover > img, .indexAboutCard:focus-visible > img { transform: scale(1.04); }
+.indexAboutCard:hover .indexAboutInfo:after { transform: translateX(5px); }
+.indexAboutCard:focus-visible { outline: 3px solid #005ee2;outline-offset: 4px; }
+.indexFooterNav { display: flex;justify-content: space-between;gap: 24px;margin-top: 145px; }
+.indexFooterColumn { min-width: 0; }
+.indexFooterColumn h3 { margin-bottom: 10px;font-size: 18px;line-height: 30px;font-weight: normal; }
+.indexFooterColumn h3 a { color: #141414; }
+.indexFooterColumn li { font-size: 16px;line-height: 30px; }
+.indexFooterColumn li a { color: #555; }
+.indexFooterColumn a:hover, .indexFooterColumn a:focus-visible { color: #c70019; }
+@media (prefers-reduced-motion: reduce) {
+    .indexAboutCard > img, .indexAboutInfo:after { transition: none; }
+}
+
+
+/* 页脚版权与社交二维码 */
+.footer { padding: 34px 0;background: #063f83 url(../img/footBg.jpg) no-repeat center/cover; }
+.footerInner { min-height: 132px;display: flex;align-items: center;justify-content: space-between;gap: 90px; }
+.footerLogo { width: 240px;display: block;flex-shrink: 0; }
+.footerLogo img { width: 100%;height: auto;display: block; }
+.footerInfo { flex: 1;min-width: 0; }
+.footerInfoTop { display: flex;align-items: flex-start;justify-content: space-between;gap: 14px 24px;flex-wrap: wrap; }
+.footerContact p, .footerCopyright { color: #b1c6e0;font-size: 14px;line-height: 24px; }
+.footerContact span { margin-left: 32px;color: inherit; }
+.footer a { color: #b1c6e0; }
+.footer a:hover, .footer a:focus-visible { color: #fff;text-decoration: underline; }
+.footerLinks { display: flex;align-items: center;padding-top: 5px; }
+.footerLinks a { padding: 0 9px;border-left: 1px solid rgba(177,198,224,0.6);font-size: 14px;line-height: 14px;white-space: nowrap; }
+.footerLinks a:first-child { padding-left: 0;border-left: 0; }
+.footerLinks a:last-child { padding-right: 0; }
+.footerCopyright { margin-top: 16px; }
+.footerSocial { display: flex;gap: 26px;flex-shrink: 0; }
+.footerQr { margin: 0;width: 94px;text-align: center; }
+.footerQr img { display: block;width: 94px;height: 94px; }
+.footerQr figcaption { margin-top: 6px;color: #b1c6e0;font-size: 14px;line-height: 24px;white-space: nowrap; }
+
+@media screen and (max-width: 1600px) {
+    .siteHeader { padding: 24px 0; }
+    .navItem { margin: 0 12px; }
+    .navItem a { font-size: 16px; }
+    .headerToolsMain { padding: 0 14px; }
+    .toolItem span{font-size:14px;}
+    .langBtn span{font-size:14px;}
+    .bannerTitle { font-size: 68px; }
+    .bannerDesc { font-size: 24px; }
+    .hxxtSer{padding: 120px 0;}
+    .hxxtSerIntro1 { width: 28%; }
+    .hxxtSerTitle{font-size: 40px;}
+    .hxxtSerList { width: 65%; }
+    .hxxtSerText{padding:0 18px 16px;}
+    .hxxtSerText h3{font-size:22px;}
+    .zlcpPanel:before { width: 620px;height: 160px; }
+    .zlcpTrainWrap { width: 620px; }
+    .zlcpContent { width: 420px; }
+    .zlcpDisplayTitle { font-size: 24px; }
+    .zlcpSer{padding: 60px 0;}
+    .zlcpDisplay{min-height: 350px;}
+    .zlcpDisplayDesc { line-height: 30px; }
+    .zlcpTabItem { height: 170px; }
+    .zlcpTabBtn { padding: 20px 18px 0; }
+    .zlcpTabHead h4 { font-size: 20px; }
+    .zlcpTabHead span { font-size: 30px; }
+    .zlcpTabEn, .zlcpTabDesc { font-size: 14px;line-height: 28px; }
+    .qqbjSer{padding:60px 0 250px;}
+    .qqbjDataNum { font-size: 50px; }
+    .qqbjDataLabel{font-size: 14px;}
+    .qqbjDataItem.i2{padding-left: 4%;box-sizing: border-box;}
+    .hzgySer{margin-top: -170px;padding-bottom: 80px;}
+    .hzgySer .hzgyR { padding: 35px 40px 35px 55px;background-size: 300px 300px; }
+    .hzgyR .hxxtSerTitle { font-size: 32px; }
+    .hzgyR .hxxtSerDesc { font-size: 14px;line-height: 26px; }
+    .hzgyR .hxxtSerMore { margin-top: 40px; }
+    .indexAboutList { gap: 32px; }
+    .indexAboutInfo { padding: 24px 24px 42px; }
+    .indexAboutInfo:after { right: 24px;top: 50px; }
+    .indexAboutInfo h3 { font-size: 20px;line-height: 30px; }
+    .indexAboutEn, .indexAboutDesc { font-size: 14px;line-height: 24px; }
+    .indexFooterNav { margin-top: 110px;gap: 20px; }
+    .indexFooterColumn h3 { font-size: 16px; }
+    .indexFooterColumn li { font-size: 14px;line-height: 28px; }
+    .footerInner { gap: 40px; }
+    .footerLogo { width: 200px; }
+    .footerContact p, .footerCopyright, .footerLinks a, .footerQr figcaption { font-size: 12px; }
+    .footerContact span { margin-left: 22px; }
+    .footerLinks a { padding: 0 7px; }
+}
+
+@media screen and (max-width: 1200px) {
+
+}

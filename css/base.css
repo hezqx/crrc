@@ -1,0 +1,43 @@
+/* ===== 通用Reset ===== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, input { margin: 0;padding: 0;border: 0;outline: 0;vertical-align: baseline;background: transparent;color: #333;font-family: '微软雅黑'; }
+/* ===== 文本与列表 ===== */
+body { line-height: 1;font-family: '微软雅黑'; }
+ol, ul, li { list-style: none; }
+/* ===== 交互与标记 ===== */
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+input { background: none;border: none; }
+img { max-width: 100%; }
+/* ===== 浮动与清除 ===== */
+.lt, .fl { float: left; }
+.rt, .fr { float: right; }
+.clearfix:after { content: ".";display: block;height: 0;font-size: 0em;line-height: 0;visibility: hidden;clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both; }
+/* ===== 链接样式 ===== */
+a:link, a:visited, a:active { text-decoration: none; }
+a:active { outline: none;star:expression(this.onFocus=this.blur()); }
+a:hover { text-decoration: none; }
+/* ===== 工具类 ===== */
+.none { display: none; }
+.css3guodu { -o-transition: all 0.5s ease-out 0s;-webkit-transition: all 0.5s ease-out 0s;-moz-transition: all 0.5s ease-out 0s;transition: all 0.5s ease-out 0s; }
+.ify { text-align: justify; }
+.font48 { font-size: 48px; }
+.font24 { font-size: 24px; }
+.font20 { font-size: 20px; }
+.font18 { font-size: 18px; }
+.font16 { font-size: 16px; }
+.font14 { font-size: 14px; }
+.w50 { width: 50%; }
+.p40 { padding: 40px 0; }
+.p60 { padding: 60px 0; }
+.p20 { padding: 20px; }
+.comwidth { width: 1600px;margin: 0 auto; }
+
+
+/* 响应式代码 */
+@media screen and (max-width: 1445px) {
+.comwidth { width: 1200px; }
+
+}
