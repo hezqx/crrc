@@ -99,7 +99,7 @@
 .zlcpTabHead span { color: rgba(255,255,255,0.78);font-size: 46px;line-height: 1;font-weight: bold;position: relative;z-index: 2;transition: all 0.35s ease; }
 .zlcpTabEn { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 24px;margin-top: 8px;position: relative;z-index: 2; }
 .zlcpTabDesc { color: rgba(255,255,255,0.8);font-size: 16px;line-height: 30px;margin-top: 10px;position: relative;z-index: 2; }
-.zlcpTabMeta { margin-top: 16px;position: relative;z-index: 2; }
+.zlcpTabMeta { margin-top: 16px;position: relative;z-index: 2;display: none; }
 .zlcpTabMore { color: rgba(255,255,255,0.72);font-size: 12px;line-height: 24px;letter-spacing: 2px; }
 .zlcpTabArrow { width: 44px;height: 10px;margin-top: 7px;background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.42) 42%, rgba(255,255,255,1) 100%);position: relative;transition: all 0.35s ease; }
 .zlcpTabArrow:after { content: "";width: 10px;height: 10px;border-top: 1px solid #fff;border-right: 1px solid #fff;position: absolute;right: 0;top: 0;transform: rotate(45deg);box-sizing: border-box; }
